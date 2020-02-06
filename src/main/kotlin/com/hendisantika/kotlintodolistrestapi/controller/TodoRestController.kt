@@ -22,7 +22,7 @@ class TodoRestController(val todoRepository: TodoRepository) {
     fun getTodos() = todoRepository.findAll()
 
     @GetMapping(path = [("/{todoId}")])
-    fun getTodo(@PathVariable("todoId") todoId: Long?): Optional<Todo>? {
+    fun getTodo(@PathVariable("todoId") todoId: Long): Optional<Todo> {
         return todoRepository.findById(todoId)
     }
 
@@ -39,7 +39,7 @@ class TodoRestController(val todoRepository: TodoRepository) {
     }
 
     @DeleteMapping(path = [("/{todoId}")])
-    fun deleteTodo(@PathVariable("todoId") todoId: Long?) {
+    fun deleteTodo(@PathVariable("todoId") todoId: Long) {
         todoRepository.deleteById(todoId)
     }
 }
