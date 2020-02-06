@@ -2,6 +2,7 @@ package com.hendisantika.kotlintodolistrestapi.controller
 
 import com.hendisantika.kotlintodolistrestapi.entity.Todo
 import com.hendisantika.kotlintodolistrestapi.repository.TodoRepository
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import java.util.*
 
@@ -29,5 +30,11 @@ class TodoRestController(val todoRepository: TodoRepository) {
     fun newTodo(@RequestBody todo: Todo): Todo {
         todoRepository.save(todo)
         return todo
+    }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    fun updateTodo(todo: Todo) {
+        todoRepository.save(todo)
     }
 }
