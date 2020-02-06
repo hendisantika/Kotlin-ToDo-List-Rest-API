@@ -32,10 +32,13 @@ class TodoRestController(val todoRepository: TodoRepository) {
         return todo
     }
 
-    @PutMapping
+    @PutMapping(path = [("/{todoId}")])
     @ResponseStatus(HttpStatus.OK)
-    fun updateTodo(todo: Todo) {
-        todoRepository.save(todo)
+    fun updateTodo(@PathVariable("todoId") todoId: Long, @RequestBody todo: Todo) {
+        val todoOpt: Optional<Todo> = todoRepository.findById(todoId)
+        if (todoOpt.isPresent) {
+            todoRepository.save(todo)
+        }
     }
 
     @DeleteMapping(path = [("/{todoId}")])
