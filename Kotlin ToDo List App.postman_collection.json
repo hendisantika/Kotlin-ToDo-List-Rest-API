@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "b7a9fec3-f9b3-485d-9d71-153f6f31398f",
+    "name": "Kotlin ToDo List App",
+    "description": "Kotlin ToDo List App with Spring Boot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create New ToDo List",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"title\" : \"Belajar Java\",\n\t\"description\" : \"Belajar Java lebih dalam\",\n\t\"finished\" : false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "todos"
+          ]
+        },
+        "description": "Create New ToDo List"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All ToDo List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/todos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "todos"
+          ]
+        },
+        "description": "Get All ToDo List"
+      },
+      "response": []
+    },
+    {
+      "name": "Get ToDo List By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        },
+        "description": "Get ToDo List By Id"
+      },
+      "response": []
+    },
+    {
+      "name": "Update ToDo List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        },
+        "description": "Update ToDo List"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete ToDo List By Id ",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        },
+        "description": "Delete ToDo List By Id "
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
