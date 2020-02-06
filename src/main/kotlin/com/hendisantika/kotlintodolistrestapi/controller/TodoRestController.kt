@@ -1,6 +1,7 @@
 package com.hendisantika.kotlintodolistrestapi.controller
 
 import com.hendisantika.kotlintodolistrestapi.repository.TodoRepository
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -15,4 +16,7 @@ import org.springframework.web.bind.annotation.RestController
  */
 @RestController
 @RequestMapping("/todos")
-class TodoRestController(val todoRepository: TodoRepository)
+class TodoRestController(val todoRepository: TodoRepository) {
+    @GetMapping
+    fun getTodos() = todoRepository.findAll()
+}
