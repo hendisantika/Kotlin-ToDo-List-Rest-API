@@ -2,10 +2,7 @@ package com.hendisantika.kotlintodolistrestapi.controller
 
 import com.hendisantika.kotlintodolistrestapi.entity.Todo
 import com.hendisantika.kotlintodolistrestapi.repository.TodoRepository
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import java.util.*
 
 /**
@@ -26,5 +23,11 @@ class TodoRestController(val todoRepository: TodoRepository) {
     @GetMapping(path = [("/{todoId}")])
     fun getTodo(@PathVariable("todoId") todoId: Long?): Optional<Todo>? {
         return todoRepository.findById(todoId)
+    }
+
+    @PostMapping
+    fun newTodo(@RequestBody todo: Todo): Todo {
+        todoRepository.save(todo)
+        return todo
     }
 }
