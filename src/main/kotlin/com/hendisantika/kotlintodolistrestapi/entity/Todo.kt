@@ -13,7 +13,7 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "todo")
-data class Todo {
+class Todo {
 
     /* GenerationType.IDENTITY is for databases like Postgres
         that use sequence tables instead of auto-increment
