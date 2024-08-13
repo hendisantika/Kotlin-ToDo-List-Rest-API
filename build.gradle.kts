@@ -5,7 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.6"
     id("org.flywaydb.flyway") version "10.17.0"
     kotlin("jvm") version "2.0.10"
-    kotlin("plugin.spring") version "1.3.61"
+    kotlin("plugin.spring") version "2.0.10"
 }
 
 group = "com.hendisantika"
