@@ -1,6 +1,6 @@
 package com.hendisantika.kotlintodolistrestapi.entity
 
-import javax.persistence.*
+import jakarta.persistence.*
 
 /**
  * Created by IntelliJ IDEA.
