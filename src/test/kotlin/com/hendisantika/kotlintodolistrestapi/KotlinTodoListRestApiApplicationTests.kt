@@ -21,7 +21,7 @@ class KotlinTodoListRestApiApplicationTests {
 
     companion object {
         @Container
-        val postgresContainer = PostgreSQLContainer<Nothing>("postgres:16.4").apply {
+        val postgresContainer = PostgreSQLContainer<Nothing>("postgres:17.4").apply {
             withDatabaseName("testdb")
             withUsername("testuser")
             withPassword("testpass")
