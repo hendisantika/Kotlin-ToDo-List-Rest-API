@@ -8,10 +8,10 @@ plugins {
 
 group = "com.hendisantika"
 version = "0.0.1-SNAPSHOT"
-//java.sourceCompatibility = JavaVersion.VERSION_21
+//java.sourceCompatibility = JavaVersion.VERSION_25
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(25)
     }
 }
 
