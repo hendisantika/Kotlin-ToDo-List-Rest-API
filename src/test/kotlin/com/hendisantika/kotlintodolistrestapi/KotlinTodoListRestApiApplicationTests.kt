@@ -33,6 +33,8 @@ class KotlinTodoListRestApiApplicationTests {
             registry.add("spring.datasource.url", postgresContainer::getJdbcUrl)
             registry.add("spring.datasource.username", postgresContainer::getUsername)
             registry.add("spring.datasource.password", postgresContainer::getPassword)
+            // Flyway creates tables in the "todo" schema (spring.flyway.schemas), so point Hibernate there too
+            registry.add("spring.jpa.properties.hibernate.default_schema") { "todo" }
         }
     }
 
