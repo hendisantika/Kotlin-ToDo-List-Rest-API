@@ -1,7 +1,7 @@
 plugins {
     id("org.springframework.boot") version "4.1.1"
     id("io.spring.dependency-management") version "1.1.7"
-    id("org.flywaydb.flyway") version "13.10.3"
+    id("org.flywaydb.flyway") version "13.11.1"
     kotlin("jvm") version "2.4.21"
     kotlin("plugin.spring") version "2.4.21"
 }
@@ -25,7 +25,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-data-rest")
     implementation("org.springframework.boot:spring-boot-starter-flyway")
-    implementation("org.flywaydb:flyway-core:13.10.3")
+    implementation("org.flywaydb:flyway-core:13.11.1")
     implementation("org.flywaydb:flyway-database-postgresql")
     implementation("org.postgresql:postgresql")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
